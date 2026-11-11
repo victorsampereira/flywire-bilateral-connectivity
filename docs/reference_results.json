@@ -1,0 +1,230 @@
+{
+  "dataset": "FAFB 783 / annotations v2.1.0",
+  "exploratory_examples": [
+    {
+      "asymmetry_score": "0.9099307159353349",
+      "input_fraction_asymmetry": "0.2688548238538446",
+      "left_input_fraction": "0.2313167259786477",
+      "left_per_source": "13.0",
+      "left_per_target": "13.0",
+      "left_source_neurons": "5",
+      "left_synapses": "65",
+      "left_target_input_budget": "281",
+      "left_target_neurons": "5",
+      "raw_asymmetry": "-0.9243746364165212",
+      "relation": "same",
+      "right_input_fraction": "0.13329035377548554",
+      "right_per_source": "275.6666666666667",
+      "right_per_target": "8.751322751322752",
+      "right_source_neurons": "6",
+      "right_synapses": "1654",
+      "right_target_input_budget": "12409",
+      "right_target_neurons": "189",
+      "signed_asymmetry": "-0.9099307159353349",
+      "source_type": "CB0980",
+      "target_asymmetry": "0.19532960350279735",
+      "target_type": "JO-E"
+    },
+    {
+      "asymmetry_score": "0.3637901861252115",
+      "input_fraction_asymmetry": "0.22940259161623291",
+      "left_input_fraction": "0.22815533980582525",
+      "left_per_source": "94.0",
+      "left_per_target": "94.0",
+      "left_source_neurons": "2",
+      "left_synapses": "188",
+      "left_target_input_budget": "824",
+      "left_target_neurons": "2",
+      "raw_asymmetry": "-0.3637901861252115",
+      "relation": "same",
+      "right_input_fraction": "0.14300922640170333",
+      "right_per_source": "201.5",
+      "right_per_target": "100.75",
+      "right_source_neurons": "2",
+      "right_synapses": "403",
+      "right_target_input_budget": "2818",
+      "right_target_neurons": "4",
+      "signed_asymmetry": "-0.3637901861252115",
+      "source_type": "PS137",
+      "target_asymmetry": "-0.03465982028241335",
+      "target_type": "CB2825"
+    },
+    {
+      "asymmetry_score": "0.018674848148827954",
+      "input_fraction_asymmetry": "0.033837822860992836",
+      "left_input_fraction": "0.3589766081871345",
+      "left_per_source": "32.47883597883598",
+      "left_per_target": "24554.0",
+      "left_source_neurons": "756",
+      "left_synapses": "24554",
+      "left_target_input_budget": "68400",
+      "left_target_neurons": "1",
+      "raw_asymmetry": "0.02265722615576843",
+      "relation": "opposite",
+      "right_input_fraction": "0.3354777834963115",
+      "right_per_source": "31.288",
+      "right_per_target": "23466.0",
+      "right_source_neurons": "750",
+      "right_synapses": "23466",
+      "right_target_input_budget": "69948",
+      "right_target_neurons": "1",
+      "signed_asymmetry": "0.018674848148827954",
+      "source_type": "Tm9",
+      "target_asymmetry": "0.02265722615576843",
+      "target_type": "CT1"
+    }
+  ],
+  "independent_validation": {
+    "annotation_proofread_id_sets_equal": true,
+    "connection_rows": 16847997,
+    "duckdb_version": "2.0.0",
+    "edge_totals_match_audit": true,
+    "first_mismatches": [],
+    "kenyon_counts": {
+      "left": 2580,
+      "right": 2597
+    },
+    "kenyon_published_match": true,
+    "mismatch_count": 0,
+    "note": "PLP146 is the hemibrain alias of combined type LTe56 in v2.1.0.",
+    "proofread_neurons": 139255,
+    "published_examples": [
+      {
+        "match": true,
+        "observed": [
+          0,
+          34
+        ],
+        "published": [
+          0,
+          34
+        ],
+        "source": "LTe56",
+        "target": "DNp42"
+      },
+      {
+        "match": true,
+        "observed": [
+          30,
+          23
+        ],
+        "published": [
+          30,
+          23
+        ],
+        "source": "LHCENT3",
+        "target": "LHAV3g2"
+      }
+    ],
+    "report_rows_checked": 48986,
+    "synapses": 54492922
+  },
+  "normalization_sensitivity": [
+    {
+      "both_measures_defined": 48986,
+      "min_total_synapses": 100,
+      "opposite_sign": 11572,
+      "opposite_sign_both_abs_at_least_0.2": 160,
+      "rows": 48986
+    },
+    {
+      "both_measures_defined": 7716,
+      "min_total_synapses": 500,
+      "opposite_sign": 2354,
+      "opposite_sign_both_abs_at_least_0.2": 9,
+      "rows": 7716
+    },
+    {
+      "both_measures_defined": 4137,
+      "min_total_synapses": 1000,
+      "opposite_sign": 1394,
+      "opposite_sign_both_abs_at_least_0.2": 2,
+      "rows": 4137
+    }
+  ],
+  "policies": {
+    "v783": {
+      "annotation_counts": {
+        "eligible": 129945,
+        "excluded_seg_type": 1736,
+        "fallback_typed": 20721,
+        "nonlateral": 130,
+        "total": 139255,
+        "untyped": 7444
+      },
+      "candidate_type_pairs": 48986,
+      "edge_rows": {
+        "excluded_annotation": 2362590,
+        "opposite": 1892623,
+        "same": 12592784
+      },
+      "edge_synapses": {
+        "excluded_annotation": 6561164,
+        "opposite": 7026166,
+        "same": 40905592
+      },
+      "exclude_seg_types": true,
+      "missing_root_count": 0,
+      "total_rows": 16847997,
+      "total_synapses": 54492922,
+      "type_policy": "combined"
+    },
+    "v783_cell_type_only": {
+      "annotation_counts": {
+        "eligible": 110997,
+        "excluded_seg_type": 0,
+        "nonlateral": 93,
+        "total": 139255,
+        "untyped": 28165
+      },
+      "candidate_type_pairs": 19699,
+      "edge_rows": {
+        "excluded_annotation": 8437178,
+        "opposite": 684167,
+        "same": 7726652
+      },
+      "edge_synapses": {
+        "excluded_annotation": 27311175,
+        "opposite": 2519986,
+        "same": 24661761
+      },
+      "exclude_seg_types": false,
+      "missing_root_count": 0,
+      "total_rows": 16847997,
+      "total_synapses": 54492922,
+      "type_policy": "cell_type"
+    },
+    "v783_combined_all": {
+      "annotation_counts": {
+        "eligible": 131681,
+        "excluded_seg_type": 0,
+        "fallback_typed": 20721,
+        "nonlateral": 130,
+        "total": 139255,
+        "untyped": 7444
+      },
+      "candidate_type_pairs": 51509,
+      "edge_rows": {
+        "excluded_annotation": 1871986,
+        "opposite": 2055193,
+        "same": 12920818
+      },
+      "edge_synapses": {
+        "excluded_annotation": 4917567,
+        "opposite": 7566388,
+        "same": 42008967
+      },
+      "exclude_seg_types": false,
+      "missing_root_count": 0,
+      "total_rows": 16847997,
+      "total_synapses": 54492922,
+      "type_policy": "combined"
+    }
+  },
+  "repeat_byte_identical": true,
+  "report_relations": {
+    "opposite": 10445,
+    "same": 38541
+  },
+  "report_sha256": "b2e6ad579194ee6710c6ad7cd7add7777c63952386931ed318073bc9c67d512b"
+}

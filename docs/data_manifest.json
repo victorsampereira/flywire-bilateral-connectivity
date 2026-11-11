@@ -1,0 +1,80 @@
+{
+  "description": "Publication-era FAFB v783 proofread connectivity and annotation inputs. See docs/METHODOLOGY.md for scope.",
+  "files": {
+    "annotations": {
+      "filename": "annotations_v2.1.0.tsv",
+      "url": "https://raw.githubusercontent.com/flyconnectome/flywire_annotations/ebd66db2596fcc39c6950fb54ea3efa00f7fe8a0/supplemental_files/Supplemental_file1_neuron_annotations.tsv",
+      "materialization": 783,
+      "sha256": "30be6c73975a70c56d930e27911f36455d3886e15abf383b78edd2a5d679e0b6",
+      "bytes": 27015208,
+      "retrieved_date": "2026-11-10",
+      "columns": [
+        "supervoxel_id",
+        "root_id",
+        "pos_x",
+        "pos_y",
+        "pos_z",
+        "soma_x",
+        "soma_y",
+        "soma_z",
+        "nucleus_id",
+        "flow",
+        "super_class",
+        "cell_class",
+        "cell_sub_class",
+        "cell_type",
+        "hemibrain_type",
+        "ito_lee_hemilineage",
+        "hartenstein_hemilineage",
+        "morphology_group",
+        "top_nt",
+        "top_nt_conf",
+        "known_nt",
+        "known_nt_source",
+        "side",
+        "nerve",
+        "vfb_id",
+        "fbbt_id",
+        "status"
+      ],
+      "rows": 139255,
+      "annotation_version": "v2.1.0",
+      "commit": "ebd66db2596fcc39c6950fb54ea3efa00f7fe8a0"
+    },
+    "connections": {
+      "filename": "proofread_connections_783.feather",
+      "url": "https://zenodo.org/records/10676866/files/proofread_connections_783.feather?download=1",
+      "materialization": 783,
+      "sha256": "24f960ae3e7d4f8cd30db3b62e99fb5179cc3d1e76d8c155bfb441e9737d3faf",
+      "bytes": 852022274,
+      "retrieved_date": "2026-11-10",
+      "publisher_md5": "f48f972d262323a102aed49af1396b8a",
+      "license": "CC-BY-4.0",
+      "doi": "10.5281/zenodo.10676866",
+      "schema": {
+        "pre_pt_root_id": "int64",
+        "post_pt_root_id": "int64",
+        "neuropil": "string",
+        "syn_count": "int64",
+        "gaba_avg": "double",
+        "ach_avg": "double",
+        "glut_avg": "double",
+        "oct_avg": "double",
+        "ser_avg": "double",
+        "da_avg": "double"
+      },
+      "rows": 16847997
+    },
+    "proofread_ids": {
+      "filename": "proofread_root_ids_783.npy",
+      "url": "https://zenodo.org/records/10676866/files/proofread_root_ids_783.npy?download=1",
+      "materialization": 783,
+      "sha256": "7c7b7e818e9232e5ab64793d52ba20574dbe9da3a6509fbc74193b0f259a01be",
+      "bytes": 1114168,
+      "retrieved_date": "2026-11-10",
+      "publisher_md5": "e0e6c19732fd8c7a4e39a2d170105421",
+      "license": "CC-BY-4.0",
+      "doi": "10.5281/zenodo.10676866"
+    }
+  }
+}
