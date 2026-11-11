@@ -1,0 +1,54 @@
+name: Reference dataset validation
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install
+        run: python -m pip install -e '.[data,validation]'
+      - name: Download and verify official inputs
+        run: python scripts/download_data.py
+      - name: Analyze complete proofread export
+        run: |
+          python -m flywire_bilateral \
+            --annotations data/annotations_v2.1.0.tsv \
+            --connections data/proofread_connections_783.feather \
+            --manifest docs/data_manifest.json \
+            --snapshot 'FAFB v783 / annotations v2.1.0' \
+            --output results/v783.csv
+      - name: Independently verify results and published examples
+        run: python scripts/validate_real_data.py
+      - name: Verify reference report identity
+        run: |
+          python - <<'PY'
+          import hashlib
+          import json
+          from pathlib import Path
+          expected = json.loads(Path('docs/reference_results.json').read_text())['report_sha256']
+          actual = hashlib.sha256(Path('results/v783.csv').read_bytes()).hexdigest()
+          if actual != expected:
+              raise SystemExit(f'Report checksum differs: {actual} != {expected}')
+          print(f'Reference report reproduced: {actual}')
+          PY
+      - name: Save report and verification evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: v783-reference-validation
+          path: |
+            results/v783.csv
+            results/v783.csv.audit.json
+            results/validation.json
+            data/retrieval.json
+          if-no-files-found: ignore
