@@ -1,0 +1,3 @@
+source_type,target_type,relation,left_synapses,right_synapses,left_source_neurons,right_source_neurons,left_target_neurons,right_target_neurons,left_per_source,right_per_source,signed_asymmetry,raw_asymmetry,left_per_target,right_per_target,target_asymmetry,left_target_input_budget,right_target_input_budget,left_input_fraction,right_input_fraction,input_fraction_asymmetry,asymmetry_score
+A,B,same,100,15,2,1,1,1,50.0,15.0,0.5384615384615384,0.7391304347826086,100.0,15.0,0.7391304347826086,100,15,1.0,1.0,0.0,0.5384615384615384
+B,C,same,60,55,1,1,1,1,60.0,55.0,0.043478260869565216,0.043478260869565216,60.0,55.0,0.043478260869565216,60,55,1.0,1.0,0.0,0.043478260869565216

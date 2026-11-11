@@ -1,0 +1,6 @@
+pre_root_id,post_root_id,neuropil,syn_count,nt_type
+101,201,AL_L,80,ACH
+102,201,AL_L,20,ACH
+103,202,AL_R,15,ACH
+201,301,AL_L,60,GABA
+202,302,AL_R,55,GABA
