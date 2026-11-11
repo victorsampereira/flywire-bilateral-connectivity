@@ -1,6 +1,8 @@
 # Findings from the full v783 run
 
-Executed locally on 10 November 2026. These are reproducible observations about
+Executed locally on 10 November 2026 and reproduced, with an identical report
+checksum, on a GitHub-hosted runner ([run 42939139229](https://github.com/victorsampereira/flywire-bilateral-connectivity/actions/runs/42939139229)).
+These are reproducible observations about
 an analysis workflow, **not a discovery of biological asymmetry**. Machine-readable
 counts, examples and the report checksum are in [reference_results.json](reference_results.json).
 All tables below derive from the official data identified by [the manifest](data_manifest.json).

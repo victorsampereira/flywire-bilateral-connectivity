@@ -11,8 +11,14 @@
 - 34 local tests, Ruff lint, Ruff formatting check and strict mypy on the package.
 - Editable installation reports version 0.2.0; a wheel builds successfully and
   includes the CLI, package source, `py.typed` marker and license.
-- CI workflow configured for Python 3.10/3.13, including optional Feather tests.
-  Current remote execution status is available in the repository Actions tab.
+- CI runs the tests, Ruff and strict mypy on Python 3.10 and 3.13, including
+  optional Feather tests.
+- The full reference validation was also run on a GitHub-hosted Ubuntu runner
+  ([run 42939139229](https://github.com/victorsampereira/flywire-bilateral-connectivity/actions/runs/42939139229),
+  11 November 2026 UTC): the official inputs were downloaded and verified,
+  16,847,997 rows / 54,492,922 synapses were processed, all 48,986 report rows
+  were checked independently, and the report SHA-256 matched the reference hash
+  below, the same hash produced locally on macOS arm64.
 
 Full results are in [FINDINGS.md](FINDINGS.md); the small tracked
 [reference_results.json](reference_results.json) is a deliberate review/regression
